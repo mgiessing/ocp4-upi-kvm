@@ -93,7 +93,7 @@ resource "null_resource" "config" {
         inline = [
             "rm -rf ocp4-helpernode",
             "echo 'Cloning into ocp4-helpernode...'",
-            "git clone https://github.com/RedHatOfficial/ocp4-helpernode --quiet",
+            "git clone https://github.com/mgiessing/ocp4-helpernode --quiet",
             "cd ocp4-helpernode && git checkout ${var.helpernode_tag}"
         ]
     }
@@ -126,7 +126,7 @@ resource "null_resource" "install" {
         inline = [
             "rm -rf ocp4-playbooks",
             "echo 'Cloning into ocp4-playbooks...'",
-            "git clone https://github.com/ocp-power-automation/ocp4-playbooks --quiet",
+            "git clone https://github.com/mgiessing/ocp4-playbooks --quiet",
             "cd ocp4-playbooks && git checkout ${var.install_playbook_tag}"
         ]
     }
